@@ -1,2 +1,2 @@
 # ds-project-01
-First data science project
+This is our first data science project!
