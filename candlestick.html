@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.14.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 12}}, "layer": [{"mark": {"type": "rule", "size": 1}, "encoding": {"color": {"condition": {"test": "datum.open <= datum.close", "value": "#06982d"}, "value": "#ae1325"}, "tooltip": [{"field": "low", "format": ",.3f", "type": "quantitative"}, {"field": "high", "format": ",.3f", "type": "quantitative"}], "x": {"axis": {"format": "%H:%M", "labelAngle": -80}, "field": "Datetime", "title": "Datetime", "type": "temporal"}, "y": {"axis": {"titleAngle": 0, "titlePadding": 20}, "field": "low", "scale": {"zero": false}, "title": "NVDA", "type": "quantitative"}, "y2": {"field": "high"}}}, {"mark": {"type": "bar", "size": 10}, "encoding": {"color": {"condition": {"test": "datum.open <= datum.close", "value": "#06982d"}, "value": "#ae1325"}, "tooltip": [{"field": "close", "format": ",.3f", "type": "quantitative"}, {"field": "open", "format": ",.3f", "type": "quantitative"}], "x": {"axis": {"format": "%H:%M", "labelAngle": -80}, "field": "Datetime", "title": "Datetime", "type": "temporal"}, "y": {"field": "open", "type": "quantitative"}, "y2": {"field": "close"}}}], "data": {"name": "data-14bf6b800529cf64d1684db6e5616a5d"}, "height": 300, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.14.1.json", "datasets": {"data-14bf6b800529cf64d1684db6e5616a5d": [{"Datetime": "2024-12-10T14:30:00+00:00", "open": 138.89999389648438, "close": 141.60360717773438, "low": 138.80999755859375, "high": 141.61990356445312, "return": 2.70361328125}, {"Datetime": "2024-12-10T14:45:00+00:00", "open": 141.61000061035156, "close": 140.92999267578125, "low": 140.4199981689453, "high": 141.82000732421875, "return": -0.6800079345703125}, {"Datetime": "2024-12-10T15:00:00+00:00", "open": 140.9250030517578, "close": 140.8300018310547, "low": 140.6199951171875, "high": 141.27999877929688, "return": -0.095001220703125}, {"Datetime": "2024-12-10T15:15:00+00:00", "open": 140.80999755859375, "close": 140.07000732421875, "low": 140.05999755859375, "high": 140.9149932861328, "return": -0.739990234375}, {"Datetime": "2024-12-10T15:30:00+00:00", "open": 140.05999755859375, "close": 139.39990234375, "low": 139.25, "high": 140.16000366210938, "return": -0.66009521484375}, {"Datetime": "2024-12-10T15:45:00+00:00", "open": 139.39999389648438, "close": 138.14500427246094, "low": 138.10000610351562, "high": 139.55799865722656, "return": -1.2549896240234375}, {"Datetime": "2024-12-10T16:00:00+00:00", "open": 138.13999938964844, "close": 137.55499267578125, "low": 137.29010009765625, "high": 138.27999877929688, "return": -0.5850067138671875}, {"Datetime": "2024-12-10T16:15:00+00:00", "open": 137.5117950439453, "close": 137.17990112304688, "low": 137.07000732421875, "high": 137.89999389648438, "return": -0.3318939208984375}, {"Datetime": "2024-12-10T16:30:00+00:00", "open": 137.19000244140625, "close": 136.32000732421875, "low": 136.17999267578125, "high": 137.25999450683594, "return": -0.8699951171875}, {"Datetime": "2024-12-10T16:45:00+00:00", "open": 136.30999755859375, "close": 136.97999572753906, "low": 136.27999877929688, "high": 137.02999877929688, "return": 0.6699981689453125}, {"Datetime": "2024-12-10T17:00:00+00:00", "open": 136.97000122070312, "close": 136.13499450683594, "low": 136.1199951171875, "high": 136.99000549316406, "return": -0.8350067138671875}, {"Datetime": "2024-12-10T17:15:00+00:00", "open": 136.13999938964844, "close": 136.2899932861328, "low": 135.764892578125, "high": 136.49000549316406, "return": 0.149993896484375}, {"Datetime": "2024-12-10T17:30:00+00:00", "open": 136.2899932861328, "close": 136.5699005126953, "low": 136.25, "high": 136.85000610351562, "return": 0.2799072265625}, {"Datetime": "2024-12-10T17:45:00+00:00", "open": 136.56109619140625, "close": 136.4799041748047, "low": 136.42999267578125, "high": 136.85000610351562, "return": -0.0811920166015625}, {"Datetime": "2024-12-10T18:00:00+00:00", "open": 136.47500610351562, "close": 136.08999633789062, "low": 135.96009826660156, "high": 136.6300048828125, "return": -0.385009765625}, {"Datetime": "2024-12-10T18:15:00+00:00", "open": 136.10000610351562, "close": 136.41000366210938, "low": 136.02000427246094, "high": 136.41000366210938, "return": 0.30999755859375}, {"Datetime": "2024-12-10T18:30:00+00:00", "open": 136.41000366210938, "close": 136.14340209960938, "low": 136.1300048828125, "high": 136.64999389648438, "return": -0.2666015625}, {"Datetime": "2024-12-10T18:45:00+00:00", "open": 136.14300537109375, "close": 135.7100067138672, "low": 135.6699981689453, "high": 136.14990234375, "return": -0.4329986572265625}, {"Datetime": "2024-12-10T19:00:00+00:00", "open": 135.7030029296875, "close": 135.9199981689453, "low": 135.6300048828125, "high": 136.14990234375, "return": 0.2169952392578125}, {"Datetime": "2024-12-10T19:15:00+00:00", "open": 135.9199981689453, "close": 135.88999938964844, "low": 135.7449951171875, "high": 136.0399932861328, "return": -0.029998779296875}, {"Datetime": "2024-12-10T19:30:00+00:00", "open": 135.88009643554688, "close": 135.63499450683594, "low": 135.14999389648438, "high": 135.9694061279297, "return": -0.2451019287109375}, {"Datetime": "2024-12-10T19:45:00+00:00", "open": 135.6309051513672, "close": 134.6999969482422, "low": 134.69000244140625, "high": 135.6999053955078, "return": -0.930908203125}, {"Datetime": "2024-12-10T20:00:00+00:00", "open": 134.7100067138672, "close": 134.9407958984375, "low": 133.8000030517578, "high": 134.9499969482422, "return": 0.2307891845703125}, {"Datetime": "2024-12-10T20:15:00+00:00", "open": 134.94000244140625, "close": 134.5800018310547, "low": 134.49000549316406, "high": 135.0399932861328, "return": -0.3600006103515625}, {"Datetime": "2024-12-10T20:30:00+00:00", "open": 134.58999633789062, "close": 134.77099609375, "low": 134.44000244140625, "high": 135.02000427246094, "return": 0.180999755859375}, {"Datetime": "2024-12-10T20:45:00+00:00", "open": 134.77999877929688, "close": 135.0, "low": 134.7301025390625, "high": 135.3800048828125, "return": 0.220001220703125}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
